@@ -1,0 +1,101 @@
+<head>
+    <title>Employee PayRoll form</title>
+</head>
+
+
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="assets/logo.png" alt="image">
+            <div>
+                <span class="emp-text"> Employee</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+    <div class="form">
+        
+            <div class="form-head"> Employee PayRoll form</div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name"  [(ngModel)]="name" placeholder="Your name..."
+                    required>
+
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="profile">Profile image</label>
+                <div class="profile-radio-content">
+                    <label> <input type="radio" id="profilel" name="profile" [(ngModel)]="profile"
+                            value="assets/Ellipse -1.png" required>
+                        <img class="profile" id='imagel' src="assets/Ellipse -1.png"> </label>
+                    <label> <input type="radio" id="profile2" name="profile" [(ngModel)]="profile"
+                            value="assets/Ellipse -2.png" required>
+                        <img class="profile" id='image2' src="assets/Ellipse -2.png"> </label>
+                    <label> <input type="radio" id="profile3" name="profile" [(ngModel)]="profile"
+                            value="assets/Ellipse -3.png" required>
+                        <img class="profile" id='image3' src="assets/Ellipse -3.png"> </label>
+                    <label> <input type="radio" id="profile4" name="profile" [(ngModel)]="profile"
+                            value="assets/Ellipse -4.png" required>
+                        <img class="profile" id='image4' src="assets/Ellipse -4.png"> </label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" [(ngModel)]="gender">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" [(ngModel)]="gender">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div *ngFor="let dep of departmentList">
+                    <label>
+                      <input type="checkbox" [value]="dep.name" (change)="onCheckboxChange($event)">
+                      {{dep.name}}
+                    </label>
+                  </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your salary</label>
+                <select name="salary"  id="salary" formControlName="salary" [(ngModel)]="salary">
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="30000">30000</option>
+                    <option value="40000">40000</option>
+                    <option value="50000">50000</option>
+                    <option value="60000">60000</option>
+                    <option value="70000">70000</option>
+                    <option value="80000">80000</option>
+                    <option value="90000">90000</option>
+                    <option value="100000">100000</option>
+                </select>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="startDate" >Start Date</label>
+                <input type="date" id="start" name="jobstart" value="2016-01-01" min="2016-01-01" max="2022-1012" [(ngModel)]="startDate">
+                
+                   
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <input id="notes" class="input" name="Notes" placeholder=""[(ngModel)]="notes">
+
+            </div>
+            <div class="buttonParent">
+                <!-- <a href="./EmpPayRoll.html" class="resetButton button cancelButton">Cancel</a> -->
+                <div class="submit-reset">
+                    <button type="submit" class="button submitButton"(click)=" onSubmit(empID)" >UPDATE</button>
+                    <!-- <button type="reset" class="resetButton button">Reset</button> -->
+                </div>
+            </div>
+            
+    
+        
+</div>

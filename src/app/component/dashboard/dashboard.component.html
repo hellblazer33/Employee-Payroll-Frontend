@@ -1,0 +1,57 @@
+<head>
+    
+    <title>Employee Payroll App</title>
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="assets/logo.png" alt="image" style="width: 50px;" alt="displayed">
+            <div>
+                <span class="emp-text">Employee</span><br>
+                <span class="emp-text emp-payroll">Payroll</span><br>
+            </div>
+        </div>
+    </header>
+    <div class="main-contents">
+        <div class="header-content">
+            <div class="emp-detail-text">
+                Employee Details <div class="emp-count">5</div>
+            </div>
+            <button class="add-button" routerLink="/addemp">Add User</button>
+        </div>
+        <div class="table-main">
+            <table id="display" class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Action</th>
+                </tr>
+               
+                <tr *ngFor="let user of users">  
+                     
+                    <td>
+                        
+                      <img src={{user.profile}} alt=""> 
+                        {{ user.name }}
+                       
+                    </td>  
+                    <td>{{ user.gender }}</td>  
+                    <td>{{ user.department }}</td>
+                    <td>{{ user.salary }}</td> 
+                    <td>{{ user.startDate }}</td> 
+                    <td>
+                        <img class="delete"src="../../../assets/delete.png"  alt="image" (click)="onDelete(user.id)">
+                        <img class="edit" src="../../../assets/edit.png" alt="image" (click)="openDialog(user)">
+                        
+                    </td>
+
+                  
+                    
+                  </tr>  
+            </table>
+        </div>
+    </div>
+</body>
