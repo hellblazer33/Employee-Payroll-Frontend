@@ -61,8 +61,8 @@
             </div>
 
             <div class="row-content">
-                <label class="label text" for="salary">Choose your salary</label>
-                <select name="salary"  id="salary" formControlName="salary" [(ngModel)]="salary">
+                <label class="label text" for="salary" [(ngModel)]="salary">Choose your salary</label>
+                <select name="salary"  id="salary" [(ngModel)]="salary">
                     <option value="10000">10000</option>
                     <option value="20000">20000</option>
                     <option value="30000">30000</option>
@@ -89,10 +89,10 @@
 
             </div>
             <div class="buttonParent">
-                <!-- <a href="./EmpPayRoll.html" class="resetButton button cancelButton">Cancel</a> -->
+                
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton"(click)=" onSubmit(empID)" >UPDATE</button>
-                    <!-- <button type="reset" class="resetButton button">Reset</button> -->
+                    
                 </div>
             </div>
             

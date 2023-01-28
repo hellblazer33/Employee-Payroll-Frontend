@@ -52,30 +52,21 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
     this.Emp=this.data.element
     this.UpdateForm = this.formBuilder.group({
-      // name: ['', Validators.required],
-      // gender: ['', Validators.required],
+      
       department:this.formBuilder.array([],[ Validators.required]),
-      // profile: ['', Validators.required],
-      // startDate:['', Validators.required],
-      // salary:['', Validators.required],
-      // notes:['', Validators.required],
+      
       
   });
   
-  //  this.data.currentMessage.subscribe((result:any)=>{
-  //   console.log(result);
-    // this.res=result
-    
-
-// })
+ 
   }
 
 onCheckboxChange(event:any) {
   const depart: FormArray = this.UpdateForm.get('department')as FormArray;
 
-  /* Selected */
+ 
   if(event.target.checked){
-    // Add a new control in the arrayForm
+    
     depart.push(new FormControl(event.target.value));
   }else{
     const index= depart.controls.findIndex(x => x.value === event.target.value);

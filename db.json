@@ -1,27 +1,15 @@
 {
   "employee": [
     {
-      "name": "Amit Singh",
+      "name": "Ram Sharma",
       "gender": "male",
       "department": [
-        "Engineer"
+        "HR"
       ],
       "profile": "assets/Ellipse -2.png",
-      "startDate": "2023-01-11",
-      "salary": 35400,
-      "notes": "amit singh",
-      "id": 37
-    },
-    {
-      "name": "Ram Singh",
-      "gender": "male",
-      "department": [
-        "Engineer"
-      ],
-      "profile": "assets/Ellipse -2.png",
-      "startDate": "2021-01-06",
-      "salary": 35800,
-      "notes": "ssss",
+      "startDate": "2021-01-12",
+      "salary": "10000",
+      "notes": "ssssharmas",
       "id": 47
     },
     {
